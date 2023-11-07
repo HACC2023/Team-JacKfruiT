@@ -5,8 +5,8 @@ import { Col, Container, Image, Row } from 'react-bootstrap';
 const Landing = () => (
   <Container id="landing-page" fluid className="py-3">
     <Row className="align-middle text-center">
-      <Col xs={4}>
-        <Image roundedCircle src="/images/meteor-logo.png" width="150px" />
+      <Col>
+        <Image src="/images/banner.jpg" fluid />
       </Col>
 
       <Col xs={8} className="d-flex flex-column justify-content-center">
