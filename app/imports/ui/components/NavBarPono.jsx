@@ -1,31 +1,26 @@
 import React from 'react';
-import { Meteor } from 'meteor/meteor';
-import { useTracker } from 'meteor/react-meteor-data';
-import { NavLink } from 'react-router-dom';
-import { Roles } from 'meteor/alanning:roles';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { BoxArrowRight, PersonFill, PersonPlusFill } from 'react-bootstrap-icons';
+// import { Meteor } from 'meteor/meteor';
+// import { useTracker } from 'meteor/react-meteor-data';
+// import { NavLink } from 'react-router-dom';
+// import { Roles } from 'meteor/alanning:roles';
+import { Nav, Navbar, Container } from 'react-bootstrap';
 
-const NavBar = () => {
+const NavBarPono = () => (
+  <Navbar className="custom-navbar" variant="dark" expand="lg" fixed="top">
+    <Container>
+      <Navbar.Brand href="#home">PONOHEALTH PROVIDERS</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+        <Nav>
+          <Nav.Link href="#find-provider">FIND A PROVIDER</Nav.Link>
+          <Nav.Link href="#home">HOME</Nav.Link>
+          <Nav.Link href="#resources">RESOURCES</Nav.Link>
+          <Nav.Link href="#faq">FAQ</Nav.Link>
+          <Nav.Link href="#blog">BLOG</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
+);
 
-  return (
-    <Navbar bg="light" expand="lg">
-      <Container>
-        <Navbar.Brand as={NavLink} to="/">
-          <h2>PonoHealthProviders</h2>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto justify-content-start">
-            {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-              <Nav.Link id="list-stuff-admin-nav" as={NavLink} to="/admin" key="admin">Admin</Nav.Link>
-            ) : ''}
-          </Nav>
-          <Nav className="justify-content-end" />
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
-};
-
-export default NavBar;
+export default NavBarPono;
