@@ -1,19 +1,30 @@
 import React from 'react';
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 /* A simple static component to render some text for the landing page. */
 const Landing = () => (
-  <Container id="landing-page" fluid className="py-3">
-    <Row className="align-middle text-center">
+  <Container>
+    <Row fluid className="hero-banner">
       <Col>
-        <Image src="/images/banner.jpg" fluid />
+        <h1>WELCOME TO PONOHEALTH PROVIDERS</h1>
+        <p>WHERE EVERYONE GETS EQUAL ACCESS</p>
       </Col>
-
-      <Col xs={8} className="d-flex flex-column justify-content-center">
-        <h1>Welcome to this template</h1>
-        <p>Now get to work and modify this app!</p>
+    </Row>
+    <Row className="my-5 help-section">
+      <Col md={8} className="text-section">
+        <h2 className="text-primary">NEED MEDICAL HELP?</h2>
+        <h2>ANXIOUS BECAUSE YOU'RE UNINSURED OR UNDER-INSURED?</h2>
+        <h2>TRYING TO FIND AFFORDABLE HEALTHCARE?</h2>
+        <p>
+          PonoHealth Providers aims to bridge the gap for the uninsured and under-insured, by enhancing healthcare
+          accessibility, promoting informed decision-making, and fostering a community where quality health services are
+          attainable for all, regardless of their financial circumstances.
+        </p>
       </Col>
-
+      <Col md={4} className="icon-section d-flex justify-content-center align-items-center">
+        {/* Replace 'icon-class' with the actual class or path to your icon */}
+        <i className="icon-class">[Your Icon Here]</i>
+      </Col>
     </Row>
   </Container>
 );
