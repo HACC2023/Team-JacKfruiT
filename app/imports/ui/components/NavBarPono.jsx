@@ -6,7 +6,7 @@ import React from 'react';
 import { Nav, Navbar, Container } from 'react-bootstrap';
 
 const NavBarPono = () => (
-  <Navbar className="custom-navbar" variant="dark" expand="lg" fixed="top">
+  <Navbar className="custom-navbar fixed-top" variant="dark" expand="lg">
     <Container>
       <Navbar.Brand href="#home">PONOHEALTH PROVIDERS</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
