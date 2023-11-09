@@ -13,7 +13,7 @@ const Landing = () => (
     <Row className="my-5 help-section">
       <Col md={8} className="text-section">
         <h2 className="text-primary">NEED MEDICAL HELP?</h2>
-        <h2>ANXIOUS BECAUSE YOU'RE UNINSURED OR UNDER-INSURED?</h2>
+        <h2>ANXIOUS BECAUSE YOURE UNINSURED OR UNDER-INSURED?</h2>
         <h2>TRYING TO FIND AFFORDABLE HEALTHCARE?</h2>
         <p>
           PonoHealth Providers aims to bridge the gap for the uninsured and under-insured, by enhancing healthcare
