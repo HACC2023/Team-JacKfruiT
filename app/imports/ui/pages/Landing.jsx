@@ -1,29 +1,27 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
 /* A simple static component to render some text for the landing page. */
 const Landing = () => (
-  <Container>
-    <Row fluid className="hero-banner">
-      <Col>
-        <h1>WELCOME TO PONOHEALTH PROVIDERS</h1>
-        <p>WHERE EVERYONE GETS EQUAL ACCESS</p>
+  <Container fluid>
+    {/* This is the Page Banner */}
+    <Row className="justify-content-md-center align-items-center hero-banner">
+      <Col xs={12} className="text-center">
+        <h1 className="header-title">Welcome to PonoHealth Providers</h1>
+        <h2 className="header-subtitle">Where everyone gets equal access</h2>
       </Col>
     </Row>
-    <Row className="my-5 help-section">
-      <Col md={8} className="text-section">
-        <h2 className="text-primary">NEED MEDICAL HELP?</h2>
-        <h2>ANXIOUS BECAUSE YOURE UNINSURED OR UNDER-INSURED?</h2>
-        <h2>TRYING TO FIND AFFORDABLE HEALTHCARE?</h2>
-        <p>
+    {/* This is the Mission section */}
+    <Row className="mission-section justify-content-md-center align-items-center pb-5">
+      <Col md={10} lg={8} xl={6} className="text-center">
+        <p className="mission-heading">Need Medical Help?</p>
+        <p className="mission-heading">Anxious because you&apos;re uninsured or under-insured?</p>
+        <p className="mission-heading">Trying to find affordable healthcare?</p>
+        <p className="mission-text">
           PonoHealth Providers aims to bridge the gap for the uninsured and under-insured, by enhancing healthcare
           accessibility, promoting informed decision-making, and fostering a community where quality health services are
           attainable for all, regardless of their financial circumstances.
         </p>
-      </Col>
-      <Col md={4} className="icon-section d-flex justify-content-center align-items-center">
-        {/* Replace 'icon-class' with the actual class or path to your icon */}
-        <i className="icon-class">[Your Icon Here]</i>
       </Col>
     </Row>
   </Container>
